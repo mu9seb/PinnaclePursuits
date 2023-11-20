@@ -60,8 +60,9 @@
     </header>
 
     <main id="main" class="mt-5 pt-5">
-        <div class="container-fluid">
+      <div class="container-fluid">
             <div class="row">
+              <!-- Filter Menus -->
                 <div class="col-3">
                     <h1 class="mx-3 border-bottom">Filters</h1>
                     <label for="locationSelect" class="mx-3">Location</label>
@@ -73,22 +74,35 @@
                         <option value="0">All Park Types</option>
                     </select>
                 </div>
+              <!-- Parks Display -->
                 <div class="col">
                     <h1 class="border-bottom">Parks</h1>
 
-                    <!-- Cards Grid -->
+                    <!-- Park Cards Grid Container -->
                     <div class="container-fluid text-center">
                         <div id="parksGrid" class="row row-cols-3">
-                            <div class="col">A column</div>
                             <div class="col">Another column</div>
                             <div class="col">and Another</div>
                             <div class="col">and Another</div>
                         </div>
+                        <!-- Card Template per Park -->
+                        <template id="parkCardTemplate">
+                          <div class="col">
+                            <div class="card border border-danger">
+                              <div class="card-body">
+                                <h1 id="parkName" class="card-title text-center"></h1>
+                                <p class="card-text"></p>
+                                <button id="visitButton" class="btn btn-dark card-link" type="button" href="">Park Webpage</button>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
+
                     </div>
                 </div>
             </div>
 
-        </div>
+      </div>
     </main>
 
     <!-- Footer -->
