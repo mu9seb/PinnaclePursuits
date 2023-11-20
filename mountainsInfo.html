@@ -59,13 +59,14 @@
     
     <main id="main" class="mt-5 pt-3">
         <!-- Masked BG image with inspo quote -->
-        <div class="container mt-4">
+        <div class="container-fluid mt-4">
           <div class="bg-image rounded">
               <img class="w-100" src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1700088813~exp=1700089413~hmac=df05ebaebc1f29cdd381dc82cc1193960beebbbfbb701c598c866e1bd6dd2d0a" alt="">
               <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.2)">
-                  <div class="text-white text-center">
-                      <p class="mt-5 mx-5 px-5">This moment is the summation of everything that’s happened to you,<br> and everything you’ve done—The summit of every mountain you’ve  ever climbed.</p>
-                      <h1 class="pt-2">Enjoy the view.</h3>
+                  <div class="text-white d-flex justify-content-around align-items-center h-100">
+                      <p class="mx-5 col-lg-2 col-sm-3">This moment is the summation of everything that’s happened to you,<br> and everything you’ve done—The summit of every mountain you’ve  ever climbed.</p>
+                      <button class="px-5 btn btn-dark" type="button">Pursue a Pinnacle</button>
+                      <h1 class="mx-5">Enjoy the view.</h3>
                   </div>
               </div>
           </div>
@@ -75,7 +76,7 @@
         <section id="mountainsContent" class="mx-2">
           <div class="row mt-5">
             <div class="col-3">
-                <select id="mountainSelectMenu" class="form-select" data-bs-theme="danger" aria-label="Default select example">
+                <select id="mountainSelectMenu" class="form-select" size="15" aria-label="Default select example">
                   <option selected>Select a Mountain</option>
                 </select>
             </div>
