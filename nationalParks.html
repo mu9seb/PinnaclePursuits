@@ -26,6 +26,9 @@
 
     <!-- Scripts -->
     <script src="./DataAssets/scripts/parkScript.js"></script>
+    <script src="./DataAssets/scripts/locationData.js"></script>
+    <script src="./DataAssets/scripts/nationalParkData.js"></script>
+    <script src="./DataAssets/scripts/parkTypeData.js"></script>
 
 </head>
 <body class="bg-light bg-gradient">
@@ -56,8 +59,36 @@
           </nav>
     </header>
 
-    <main id="content">
+    <main id="main" class="mt-5 pt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <h1 class="mx-3 border-bottom">Filters</h1>
+                    <label for="locationSelect" class="mx-3">Location</label>
+                    <select id="locationSelect" class="form-select mb-2">
+                        <option value="0">All Locations</option>
+                    </select>
+                    <label for="parkTypeSelect" class="mx-3">Park Type</label>
+                    <select id="parkTypeSelect" class="form-select">
+                        <option value="0">All Park Types</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <h1 class="border-bottom">Parks</h1>
 
+                    <!-- Cards Grid -->
+                    <div class="container-fluid text-center">
+                        <div id="parksGrid" class="row row-cols-3">
+                            <div class="col">A column</div>
+                            <div class="col">Another column</div>
+                            <div class="col">and Another</div>
+                            <div class="col">and Another</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <!-- Footer -->
