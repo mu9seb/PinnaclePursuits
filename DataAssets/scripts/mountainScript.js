@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     initMountainsDropdown();
-    
+    // Accessing Mountain Select menu and updating card on change selection
     const mountainSelectMenu = document.getElementById("mountainSelectMenu");
-    
     mountainSelectMenu.addEventListener("change", displayMountainCard);
 })
 
@@ -29,17 +28,12 @@ function displayMountainCard() {
     let mountainCoords = document.getElementById("mountainCoords");
 
 
-
+    // Updating Card Text
     mountainName.innerText = mountainObject.name;
     mountainDesc.innerText = mountainObject.desc;
-    // Storing Current text to append new
-    const effortText = mountainEffort.innerText;
-    mountainEffort.innerText = effortText + mountainObject.effort;
-    const elevationText = mountainElevation.innerText;
-    mountainElevation.innerText = elevationText + mountainObject.elevation + " ft";
+    mountainEffort.innerText = "Effort: " + mountainObject.effort;
+    mountainElevation.innerText = "Elevation: " + mountainObject.elevation + " ft";
     mountainCoords.innerText = "Latitude: " + mountainObject.coords.lat + "\n" + "Longitude: " + mountainObject.coords.lng;
-
-    console.log(mountainName)
+    // Replacing BG image
     mountainImage.src = "/DataAssets/images/" + mountainObject.img
-    mountainDesc = mountainObject.desc;
 }

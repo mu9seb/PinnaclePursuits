@@ -65,31 +65,34 @@
               <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.2)">
                   <div class="text-white d-flex justify-content-around align-items-center h-100">
                       <p class="mx-5 col-lg-2 col-sm-3">This moment is the summation of everything that’s happened to you,<br> and everything you’ve done—The summit of every mountain you’ve  ever climbed.</p>
-                      <button class="px-5 btn btn-dark" type="button">Pursue a Pinnacle</button>
+                      <button class="px-5 btn btn-dark" type="button" id="pursuitButton" onclick="document.getElementById('fillerContent').scrollIntoView();">Pursue a Pinnacle</button>
                       <h1 class="mx-5">Enjoy the view.</h3>
                   </div>
               </div>
           </div>
         </div>
         
+        <section id="fillerContent" class="mx-5 my-5">
+          <h1 class="text-center">Not all who wander are Lost</h1>
+        </section>
+
         <!-- Mountains Drowpdown and Display Card -->
-        <section id="mountainsContent" class="mx-2">
-          <div class="row mt-5">
+        <section id="mountainsContent" class="mx-5 mt-3">
+          <div class="row">
             <div class="col col-lg-2 col-sm-3">
-                <select id="mountainSelectMenu" class="form-select form-select-lg" aria-label="Default select example">
+                <select id="mountainSelectMenu" class="form-select" aria-label="Default select example">
                   <option selected>Select a Mountain</option>
                 </select>
             </div>
             <div class="col">
-              <div class="card bg-dark text-black">
+              <div class="card bg-dark text-white">
                 <img src="https://mdbcdn.b-cdn.net/img/new/slides/017.webp" class="card-img" id="mountainImage"/>
                 <div class="card-img-overlay">
                   <div class="row">
-                    <div class="col-3">
-                      <h5 class="card-title" id="mountainName">Card title</h5>
+                    <div class="col-4">
+                      <h1 class="card-title" id="mountainName">Mountain Title</h1>
                       <p class="card-text" id="mountainDesc">
-                      This is a wider card with supporting text below as a natural lead-in to additional
-                      content. This content is a little bit longer.
+                      A short description of your mountain selection will display here.
                       </p>
                     </div>
                     <div class="col-3 ms-auto">
@@ -112,7 +115,7 @@
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light bg-gradient text-muted mt-5">
       <!-- Border -->
-      <section class="p-2 border-bottom"></section>
+      <section class="p-3 border-bottom"></section>
       <!-- Section: Links  -->
       <section class="">
         <div class="container text-center text-md-start mt-5">
@@ -131,22 +134,22 @@
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" hidden>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
                 Useful links
               </h6>
               <p>
-                <a href="#!" class="text-reset">Pricing</a>
+                <a href="https://maps.google.com" class="text-reset"><i class="fas fa-map me-3" target="_blank"></i> Google Maps</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Settings</a>
+                <a href="https://www.rei.com/outlet" class="text-reset"><i class="fas fa-shirt me-3"></i> REI Outlet (Budget-Friendly Outdoors Gear)</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Orders</a>
+                <a href="https://www.backpacker.com/" class="text-reset"><i class="fas fa-notes-medical me-3"></i> Backpacker (Survival Advice)</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Help</a>
+                <a href="https://www.adventure-journal.com/" class="text-reset"><i class="fas fa-book-journal-whills me-3"></i> Adventure Journal</a>
               </p>
             </div>
             <!-- Grid column -->
