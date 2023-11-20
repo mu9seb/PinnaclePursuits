@@ -24,10 +24,14 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/styles.css">
 
+    <!-- Scripts -->
+    <script src="./DataAssets/scripts/mountainScript.js"></script>
+    <script src="./DataAssets/scripts/mountainData.js"></script>
+
 </head>
 <body class="bg-light bg-gradient">
     <header>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light bg-gradient" data-bs-theme="dark">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light bg-gradient" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="homePage.html">
                 <img src="./images/logo-removebg.png" alt="Mountain Scape" height="50" loading="eager">
@@ -53,7 +57,7 @@
           </nav>
     </header>
     
-    <main id="main">
+    <main id="main" class="mt-5 pt-3">
         <!-- Masked BG image with inspo quote -->
         <div class="container mt-4">
           <div class="bg-image rounded">
@@ -67,51 +71,60 @@
           </div>
         </div>
         
-
-        <div class="container mt-5">
-          <div class="row">
+        <!-- Mountains Drowpdown and Display Card -->
+        <section id="mountainsContent" class="mx-2">
+          <div class="row mt-5">
             <div class="col-3">
-                <select name="" id="mountain-select" class="form-select" data-bs-theme="danger" aria-label="Default select example">
+                <select id="mountainSelectMenu" class="form-select" data-bs-theme="danger" aria-label="Default select example">
                   <option selected>Select a Mountain</option>
-                  <option value="1"></option>
                 </select>
             </div>
             <div class="col">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sunt alias id totam temporibus repudiandae beatae quae at ratione nesciunt? Nihil tempore dignissimos iusto corporis. Alias similique recusandae autem ipsa.
-            </div>
-        </div>
+              <div class="card bg-dark text-white">
+                <img src="https://mdbcdn.b-cdn.net/img/new/slides/017.webp" class="card-img" id="mountainImage"/>
+                <div class="card-img-overlay">
+                  <div class="row">
+                    <div class="col-4">
+                      <h5 class="card-title" id="mountainName">Card title</h5>
+                      <p class="card-text" id="montainDesc">
+                      This is a wider card with supporting text below as a natural lead-in to additional
+                      content. This content is a little bit longer.
+                      </p>
+                    </div>
+                    <div class="col-3 ms-auto">
+                      <p class="card-text">
+                        <div id="mountainEffort">Effort: </div>
+                        <div id="mountainElevation">Elevation: </div>
+                        <div id="mountainCoords">Coordinates: </div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </section>
         
         
     </main>
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light bg-gradient text-muted mt-5">
-      <!-- Section: Social media -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-
-        <!-- Right -->
-        <div>
-          
-          
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-
+      <!-- Border -->
+      <section class="p-4 border-bottom"></section>
       <!-- Section: Links  -->
       <section class="">
         <div class="container text-center text-md-start mt-5">
           <!-- Grid row -->
           <div class="row mt-3">
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <div class="col-md-4 col-lg-4 col-xl-6 mx-auto mb-4">
               <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
               Pinnacle Pursuits
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
+                Pinnacle Pursuits seeks to empower exploration and foster a deep connection with nature. We are dedicated to curating and delivering invaluable insights, tips, and inspiration for outdoor enthusiasts. We strive to be the ultimate companion on your journey to the great outdoors, enhancing your adventures with knowledge that enlightens, excites, and enriches your outdoor experience.
               </p>
             </div>
             <!-- Grid column -->

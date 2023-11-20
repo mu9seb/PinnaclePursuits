@@ -1,37 +1,35 @@
-document.addEventListener("DOMContentLoaded"), () => {
-    const mountainSelectMenu = document.getElementById("mountainSelectMenu");
-    
-    mountainSelectMenu.addEventListener("change", )
-
-    populateMountainsMenu();
+window.onload = () => {
+    initMountainsDropdown();
 }
 
-function populateMountainsMenu() {
+
+// document.addEventListener("DOMContentLoaded", window), () => {
+//     
+    
+//     // mountainSelectMenu.addEventListener("change", )
+//     console.log("content loaded!")
+//     populateMountainsMenu(mountainSelectMenu);
+// }
+
+function initMountainsDropdown() {
+    const mountainSelectMenu = document.getElementById("mountainSelectMenu");
     let mountains = mountainsArray;
 
-    const mountainsMenu = document.getElementById("mountainSelectMenu");
-
-    mountains.foreach(mountain => {
-        mountainsMenu.append(mountain);
-    })
+    for (let i = 0; i < mountains.length; i++) {
+        let newMountain = new Option(mountains[i].name, i)
+        mountainSelectMenu.appendChild(newMountain);
+    }
 }
 
-function fillMountainCard(mountain) {
+function displayMountainCard(mountain) {
     let mountainObject = mountain;
     
     const mountainName = document.getElementById("mountainName").innerText;
     const mountainDesc = document.getElementById("mountainDesc").innerText;
-    const mountainSpecs = document.getElementById("mountainSpecs").innerText;
+    const mountainElevation = document.getElementById("mountainElevation").innerText;
+    const mountainEffort = document.getElementById("mountainEffort").innerText;
+    const mountainCoords = document.getElementById("mountainCoords").innerText;
 
-    mountainName = "";
-    mountainDesc = "";
-    mountainSpecs = "";
-
-
-}
-
-function displayMountains() {
-    const mountain = document.getElementById("mountainSelectMenu").value;
-
-    let 
+    mountainName = mountainObject.name;
+    mountainDesc = mountainObject.desc;
 }
