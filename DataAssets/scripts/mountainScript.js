@@ -2,15 +2,6 @@ window.onload = () => {
     initMountainsDropdown();
 }
 
-
-// document.addEventListener("DOMContentLoaded", window), () => {
-//     
-    
-//     // mountainSelectMenu.addEventListener("change", )
-//     console.log("content loaded!")
-//     populateMountainsMenu(mountainSelectMenu);
-// }
-
 function initMountainsDropdown() {
     const mountainSelectMenu = document.getElementById("mountainSelectMenu");
     let mountains = mountainsArray;
