@@ -79,20 +79,28 @@
                     <h1 class="border-bottom">Parks</h1>
 
                     <!-- Park Cards Grid Container -->
-                    <div class="container-fluid text-center">
-                        <div id="parksGrid" class="row row-cols-3">
-                            <div class="col">Another column</div>
+                    <div class="container-fluid">
+                        <div id="parksGrid" class="row row-cols-3 gy-3">
+                            <div class="col">A column</div>
                             <div class="col">and Another</div>
                             <div class="col">and Another</div>
                         </div>
                         <!-- Card Template per Park -->
                         <template id="parkCardTemplate">
                           <div class="col">
-                            <div class="card border border-danger">
+                            <div class="card border border-dark-subtle h-100">
                               <div class="card-body">
-                                <h1 id="parkName" class="card-title text-center"></h1>
-                                <p class="card-text"></p>
-                                <button id="visitButton" class="btn btn-dark card-link" type="button" href="">Park Webpage</button>
+                                <h3 id="parkName" class="card-title"></h3>
+                                <h6 class="card-subtitle">
+                                  <p id="parkAddress"></p>
+                                </h6>
+                                <div class="card-text">
+                                  <p id="parkInfo"></p>
+                                </div>
+                                <div class="card-link text-center">
+                                  <a id="visitButton" class="btn btn-dark" href="#" target="_blank">Park Site</a>
+                                  <a id="mapButton" class="btn btn-dark mt-2" href="#" target="_blank">See on Map</a>
+                                </div>
                               </div>
                             </div>
                           </div>
