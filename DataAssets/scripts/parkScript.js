@@ -39,16 +39,13 @@ function displayParks(parks) {
 
     // check if the browser supports templates
     if('content' in document.createElement('template')){
-        if(selectedLocationValue == 0 && selectedParkTypeValue == 0) {
-            const parksGrid = document.querySelector("#parksGrid")
-            // clear all cards
-            parksGrid.innerHTML = "";
-            // Fill grid with cards
-            parks.forEach(park => {
-                addPark(park, parksGrid);   
-            });
-        }
-        
+        const parksGrid = document.querySelector("#parksGrid")
+        // clear all cards
+        parksGrid.innerHTML = "";
+        // Fill grid with cards
+        parks.forEach(park => {
+            addPark(park, parksGrid);   
+        });
     }
 }
 
@@ -81,24 +78,28 @@ function addPark(park, parent) {
 }
 
 function filterParks() {
-    const allParks = nationalParksArray;
-    const allLocations = locationsArray;
-    const allParkTypes = parkTypesArray;
-
-    let filteredParks = [];
-    const selectedLocationValue = document.getElementById("locationSelect").value;
-    const selectedParkTypeValue = document.getElementById("parkTypeSelect").value;
-    console.log(selectedParkTypeValue)
+    let filteredParks = nationalParksArray;
+    console.log("filters reset.")
+    const locationSelectMenu = document.querySelector("#locationSelect");
+    const parkTypeSelectMenu = document.querySelector("#parkTypeSelect");
+    const selectedLocationText = locationSelectMenu.options[locationSelectMenu.selectedIndex].text;
+    const selectedParkTypeText = parkTypeSelectMenu.options[parkTypeSelectMenu.selectedIndex].text;
+    
+    console.log("Selected Location:", selectedLocationText);
+    console.log("Selected Park Type:", selectedParkTypeText);
+     
 
     // filter by checking if selected location matches park state
-    if (selectedLocationValue !== "All Locations") {
-        filteredParks = allParks.filter(park => allLocations[selectedLocationValue] == park.State)
+    if (selectedLocationText !== "All Locations") {
+        filteredParks = filteredParks.filter(park => selectedLocationText == park.State)
+        console.log("filtered by location!", filteredParks)
     }
     // further filter by checking that selected park type in park name
-    if (selectedParkTypeValue !== "All Park Types") {
-        filteredParks = filteredParks.filter(p => allParkTypes[selectedParkTypeValue].toLowerCase() in `${p.LocationName.toLowerCase()}`)
+    if (selectedParkTypeText !== "All Park Types") {
+        filteredParks = filteredParks.filter(p => p.LocationName.includes(selectedParkTypeText))
+        console.log("filtered by park type!", filteredParks)
     }
     
-
     displayParks(filteredParks);
+    console.log("Grid updated.")
 }
